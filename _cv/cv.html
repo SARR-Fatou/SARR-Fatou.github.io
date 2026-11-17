@@ -18,7 +18,7 @@
   .page { width: 210mm; height: 297mm; overflow: hidden; position: relative; }
 
   /* En-tête */
-  header { padding: 7mm 9mm 3.6mm; }
+  header { padding: 6mm 9mm 3.2mm; }
   .name { font-size: 21pt; font-weight: 600; letter-spacing: -0.01em; line-height: 1.1; }
   .title { font-size: 13pt; font-weight: 700; color: #2d333b; margin: 1.6mm 0 2mm; }
   .profile { font-size: 9pt; line-height: 1.42; }
@@ -26,7 +26,7 @@
   /* Bandeau contact */
   .band {
     background: #2d333b; color: #fff;
-    padding: 3.6mm 9mm;
+    padding: 3mm 9mm;
     display: grid; grid-template-columns: 1fr 0.9fr 1.25fr; gap: 2.4mm 6mm;
     font-size: 8.4pt;
   }
@@ -35,9 +35,9 @@
   .band svg { width: 3.8mm; height: 3.8mm; flex: none; }
 
   /* Colonnes */
-  .cols { display: grid; grid-template-columns: 1fr 64mm; gap: 8mm; padding: 5mm 9mm 0; }
+  .cols { display: grid; grid-template-columns: 1fr 57mm; gap: 7mm; padding: 4.4mm 9mm 0; }
   h2 { font-size: 11.6pt; font-weight: 700; color: #2d333b; margin-bottom: 2.2mm; }
-  section + section { margin-top: 4.4mm; }
+  section + section { margin-top: 3.8mm; }
 
   /* Frise */
   .tl { position: relative; padding-left: 5.2mm; }
@@ -53,14 +53,17 @@
   .org { font-size: 8.8pt; }
   .meta { display: flex; justify-content: space-between; font-style: italic; font-size: 8.6pt; margin: 0.4mm 0 0.6mm; }
   .desc { color: #3d434b; }
+  .orgi { font-style: normal; }
   .desc li { list-style: none; padding-left: 2.6mm; position: relative; }
   .desc li::before { content: "•"; position: absolute; left: 0; }
 
   /* Projets */
   .proj h3 { font-size: 9pt; font-weight: 700; }
-  .proj h3 .stack { font-weight: 400; color: #3d434b; }
-  .proj + .proj { margin-top: 1.6mm; }
-  .plink { font-size: 8pt; color: #2d333b; }
+  .proj + .proj { margin-top: 1.9mm; }
+  .ptech { font-size: 8.3pt; font-style: italic; color: #3d434b; margin: 0.2mm 0 0.6mm; }
+  .ptech a { color: #2d333b; font-style: normal; }
+  .proj { padding-left: 2.6mm; border-left: 0.6mm solid #2d333b; }
+  .pweb { margin-top: 2.4mm; color: #3d434b; }
   ul.dots { padding-left: 4mm; }
   ul.dots li { margin: 0.2mm 0; }
 
@@ -77,10 +80,9 @@
     <div class="name">Fatou SARR</div>
     <div class="title">Étudiante en Master MIAGE – Data, IA &amp; Big Data</div>
     <p class="profile">
-      Étudiante en Master 1 MIAGE (Ingénierie des Systèmes Intelligents) orientée Data, IA et Big Data.
-      Analyse de données, Machine Learning (Python, R), bases de données SQL/NoSQL et Business Intelligence (Power BI, Tableau).
-      Recherche un stage ou une alternance en Data Analytics, Data Science, Data Engineering ou Business Intelligence.
-      Disponible immédiatement — rythme : 3 jours en formation / 2 jours en entreprise ou 3 semaines / 3 semaines.
+      Étudiante en Master 1 MIAGE (Ingénierie des Systèmes Intelligents) orientée Data, IA et Big Data : analyse de données,
+      Machine Learning (Python, R), bases SQL/NoSQL et BI (Power BI, Tableau). Recherche un stage ou une alternance en
+      Data Analytics, Data Science, Data Engineering ou BI. Disponible immédiatement — rythme 3 j / 2 j ou 3 sem / 3 sem.
     </p>
   </header>
 
@@ -114,6 +116,35 @@
   <div class="cols">
     <div class="main">
       <section>
+        <h2>Projets data</h2>
+        <div class="proj">
+          <h3>Pipeline de données Vélib' en temps réel</h3>
+          <div class="ptech">Python · SQL · GitHub Actions — <a href="https://sarr-fatou.github.io/velib-pipeline/">sarr-fatou.github.io/velib-pipeline</a></div>
+          <ul class="desc">
+            <li>Pipeline ETL automatisé : collecte toutes les heures de l'état de ~1 500 stations (open data), contrôles qualité et tests unitaires.</li>
+            <li>Chargement en base SQL, indicateurs calculés en SQL et tableau de bord en ligne (carte, historique).</li>
+          </ul>
+        </div>
+        <div class="proj">
+          <h3>Prix de l'immobilier en Île-de-France</h3>
+          <div class="ptech">Python · pandas · scikit-learn — <a href="https://sarr-fatou.github.io/immobilier-idf/">sarr-fatou.github.io/immobilier-idf</a></div>
+          <ul class="desc">
+            <li>Nettoyage et analyse de 51 200 ventes d'appartements (open data DVF 2024) : prix au m², carte, saisonnalité.</li>
+            <li>4 modèles de Machine Learning comparés (Gradient Boosting retenu) et simulateur de prix en ligne.</li>
+          </ul>
+        </div>
+        <div class="proj">
+          <h3>Base de données d'une GED (gestion électronique de documents)</h3>
+          <div class="ptech">PostgreSQL · PL/pgSQL · MERISE — <a href="https://sarr-fatou.github.io/ged-sql/">sarr-fatou.github.io/ged-sql</a></div>
+          <ul class="desc">
+            <li>Modélisation MCD/MLD et base PostgreSQL : contraintes d'intégrité, traçabilité automatique par déclencheurs.</li>
+            <li>11 requêtes d'analyse (CTE, fonctions de fenêtre), 8 tests automatisés et tableau de bord de pilotage.</li>
+          </ul>
+        </div>
+        <p class="pweb"><strong>Projets web :</strong> API REST de gestion de clients (Node.js, Express, SQL) · site Django avec authentification.</p>
+      </section>
+
+      <section>
         <h2>Expériences professionnelles</h2>
         <div class="tl">
           <div class="entry">
@@ -130,57 +161,32 @@
             <h3>Équipière polyvalente</h3>
             <div class="org">McDonald's</div>
             <div class="meta"><span>Depuis sept. 2024</span><span>Bobigny</span></div>
-            <p class="desc">Travail en équipe, gestion des encaissements, traitement des commandes et respect des procédures.</p>
+            <p class="desc">Travail en équipe, encaissements, traitement des commandes, respect des procédures.</p>
           </div>
           <div class="entry">
             <h3>Agente d'accueil et d'orientation – Jeux Olympiques 2024</h3>
             <div class="org">RATP · Intérim</div>
             <div class="meta"><span>De juin 2024 à août 2024</span><span>Paris</span></div>
-            <p class="desc">Conseil et vente de titres de transport. Communication multilingue avec les touristes.</p>
+            <p class="desc">Conseil et vente de titres de transport, accueil multilingue des voyageurs.</p>
           </div>
         </div>
       </section>
 
-      <section>
-        <h2>Projets data</h2>
-        <div class="proj">
-          <h3>Pipeline de données Vélib' en temps réel <span class="stack">· Python, SQL, GitHub Actions</span></h3>
-          <p class="desc">Pipeline ETL automatisé chaque heure sur l'open data Vélib' (~1 500 stations) : contrôles qualité, tests, base SQL, indicateurs et tableau de bord en ligne.</p>
-          <a class="plink" href="https://sarr-fatou.github.io/velib-pipeline/">sarr-fatou.github.io/velib-pipeline</a>
-        </div>
-        <div class="proj">
-          <h3>Prix de l'immobilier en Île-de-France <span class="stack">· Python, pandas, scikit-learn</span></h3>
-          <p class="desc">Analyse de 51 200 ventes (open data DVF 2024), modèle de prédiction du prix (4 modèles comparés) et simulateur en ligne.</p>
-          <a class="plink" href="https://sarr-fatou.github.io/immobilier-idf/">sarr-fatou.github.io/immobilier-idf</a>
-        </div>
-        <div class="proj">
-          <h3>Base de données d'une GED <span class="stack">· PostgreSQL, PL/pgSQL, MERISE</span></h3>
-          <p class="desc">Modélisation MCD/MLD, traçabilité par déclencheurs, requêtes d'analyse (fonctions de fenêtre, CTE), tests et tableau de bord.</p>
-          <a class="plink" href="https://sarr-fatou.github.io/ged-sql/">sarr-fatou.github.io/ged-sql</a>
-        </div>
-        <div class="proj">
-          <h3>Applications web <span class="stack">· Node.js, Express, Django</span></h3>
-          <p class="desc">API REST de gestion de clients (CRUD) et site Django avec authentification.</p>
-        </div>
-      </section>
 
       <section>
         <h2>Diplômes et Formations</h2>
         <div class="tl">
           <div class="entry">
             <h3>Master 1 MIAGE – Ingénierie des Systèmes Intelligents</h3>
-            <div class="org">Université Paris Nanterre</div>
-            <div class="meta"><span>Depuis sept. 2026</span><span>Nanterre</span></div>
+            <div class="meta"><span><span class="orgi">Université Paris Nanterre</span> · Depuis sept. 2026</span><span>Nanterre</span></div>
           </div>
           <div class="entry">
             <h3>Double licence MIASHS (L2–L3) – Gestion &amp; Informatique (MIAGE)</h3>
-            <div class="org">Université Paris Nanterre</div>
-            <div class="meta"><span>De sept. 2024 à juin 2026</span><span>Nanterre</span></div>
+            <div class="meta"><span><span class="orgi">Université Paris Nanterre</span> · De sept. 2024 à juin 2026</span><span>Nanterre</span></div>
           </div>
           <div class="entry">
             <h3>Licence 1 – Développement web, mobile et multimédia</h3>
-            <div class="org">Université Cheikh Anta Diop</div>
-            <div class="meta"><span>De janv. 2022 à août 2023</span><span>Dakar, Sénégal</span></div>
+            <div class="meta"><span><span class="orgi">Université Cheikh Anta Diop</span> · De janv. 2022 à août 2023</span><span>Dakar, Sénégal</span></div>
           </div>
         </div>
       </section>
