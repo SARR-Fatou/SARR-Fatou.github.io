@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>CV — Fatou SARR</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 210mm; }
+  body {
+    font-family: 'Inter', Arial, sans-serif;
+    color: #1b1f24;
+    font-size: 9.1pt;
+    line-height: 1.4;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .page { width: 210mm; height: 297mm; overflow: hidden; position: relative; }
+
+  /* En-tête */
+  header { padding: 8mm 9mm 4.2mm; }
+  .name { font-size: 21pt; font-weight: 600; letter-spacing: -0.01em; line-height: 1.1; }
+  .title { font-size: 13pt; font-weight: 700; color: #2d333b; margin: 1.6mm 0 2mm; }
+  .profile { font-size: 9.2pt; line-height: 1.45; }
+
+  /* Bandeau contact */
+  .band {
+    background: #2d333b; color: #fff;
+    padding: 3.6mm 9mm;
+    display: grid; grid-template-columns: 1fr 0.9fr 1.25fr; gap: 2.4mm 6mm;
+    font-size: 8.4pt;
+  }
+  .band a { color: #fff; text-decoration: none; }
+  .band .it { display: flex; align-items: center; gap: 1.8mm; white-space: nowrap; }
+  .band svg { width: 3.8mm; height: 3.8mm; flex: none; }
+
+  /* Colonnes */
+  .cols { display: grid; grid-template-columns: 1fr 64mm; gap: 8mm; padding: 6mm 9mm 0; }
+  h2 { font-size: 12pt; font-weight: 700; color: #2d333b; margin-bottom: 2.6mm; }
+  section + section { margin-top: 5.6mm; }
+
+  /* Frise */
+  .tl { position: relative; padding-left: 5.2mm; }
+  .tl::before { content: ""; position: absolute; left: 1.15mm; top: 0; bottom: 0; width: 0.35mm; background: #1b1f24; }
+  .entry { position: relative; }
+  .entry + .entry { margin-top: 3mm; }
+  .entry::before {
+    content: ""; position: absolute; left: -5.2mm; top: 1mm;
+    width: 2.6mm; height: 2.6mm; border-radius: 50%;
+    background: #fff; border: 0.35mm solid #1b1f24;
+  }
+  .entry h3 { font-size: 9.3pt; font-weight: 700; }
+  .org { font-size: 9.1pt; }
+  .meta { display: flex; justify-content: space-between; font-style: italic; font-size: 8.9pt; margin: 0.4mm 0 0.6mm; }
+  .desc { color: #3d434b; }
+  .desc li { list-style: none; padding-left: 2.6mm; position: relative; }
+  .desc li::before { content: "•"; position: absolute; left: 0; }
+
+  /* Projets */
+  .proj h3 { font-size: 9.3pt; font-weight: 700; }
+  .proj + .proj { margin-top: 1.8mm; }
+  ul.dots { padding-left: 4mm; }
+  ul.dots li { margin: 0.2mm 0; }
+
+  /* Colonne droite */
+  .side h4 { font-size: 8.6pt; font-weight: 700; text-transform: uppercase; margin: 2.6mm 0 0.6mm; letter-spacing: 0.01em; }
+  .side h4:first-of-type { margin-top: 0; }
+  .lang + .lang { margin-top: 1.6mm; }
+  .lang strong { display: block; font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="name">Fatou SARR</div>
+    <div class="title">Étudiante en Master MIAGE – Data, IA &amp; Big Data</div>
+    <p class="profile">
+      Étudiante en Master 1 MIAGE (Ingénierie des Systèmes Intelligents) orientée Data, IA et Big Data.
+      Analyse de données, Machine Learning (Python, R), bases de données SQL/NoSQL et Business Intelligence (Power BI, Tableau).
+      Recherche un stage ou une alternance en Data Analytics, Data Science, Data Engineering ou Business Intelligence.
+      Disponible immédiatement — rythme : 3 jours en formation / 2 jours en entreprise ou 3 semaines / 3 semaines.
+    </p>
+  </header>
+
+  <div class="band">
+    <div class="it">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      <a href="mailto:fatimasaliousarr@gmail.com">fatimasaliousarr@gmail.com</a>
+    </div>
+    <div class="it">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 3l9 8"/><path d="M5 9.5V21h14V9.5"/><rect x="10" y="13" width="4" height="4"/></svg>
+      92000, Nanterre
+    </div>
+    <div class="it">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
+      <a href="https://sarr-fatou.github.io/">https://sarr-fatou.github.io/</a>
+    </div>
+    <div class="it">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+      <a href="tel:+33753263841">07 53 26 38 41</a>
+    </div>
+    <div class="it">
+      <svg viewBox="0 0 24 24" fill="#fff"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.95 1.32-1.95 2.7V21h-4z"/></svg>
+      <a href="https://www.linkedin.com/in/fatou-sarr-b5891126b">LinkedIn : Fatou Sarr</a>
+    </div>
+    <div class="it">
+      <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+      <a href="https://github.com/fatimasarrsaliou-stack">github.com/fatimasarrsaliou-stack</a>
+    </div>
+  </div>
+
+  <div class="cols">
+    <div class="main">
+      <section>
+        <h2>Expériences professionnelles</h2>
+        <div class="tl">
+          <div class="entry">
+            <h3>Stagiaire – Data Management &amp; Transformation numérique</h3>
+            <div class="org">Consulat Général du Sénégal</div>
+            <div class="meta"><span>D'avr. 2026 à juil. 2026</span><span>Paris</span></div>
+            <ul class="desc">
+              <li>Numérisation, structuration et organisation des données administratives.</li>
+              <li>Analyse des processus et optimisation de la gestion documentaire.</li>
+              <li>Étude et proposition d'une solution GED pour améliorer la qualité, la traçabilité et l'accessibilité des données.</li>
+            </ul>
+          </div>
+          <div class="entry">
+            <h3>Équipière polyvalente</h3>
+            <div class="org">McDonald's</div>
+            <div class="meta"><span>Depuis sept. 2024</span><span>Bobigny</span></div>
+            <p class="desc">Travail en équipe, gestion des encaissements, traitement des commandes et respect des procédures.</p>
+          </div>
+          <div class="entry">
+            <h3>Agente d'accueil et d'orientation – Jeux Olympiques 2024</h3>
+            <div class="org">RATP · Intérim</div>
+            <div class="meta"><span>De juin 2024 à août 2024</span><span>Paris</span></div>
+            <p class="desc">Conseil et vente de titres de transport. Communication multilingue avec les touristes.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projets</h2>
+        <div class="proj">
+          <h3>Application de gestion de clients</h3>
+          <ul class="dots">
+            <li>Développement d'une application CRUD avec API REST.</li>
+            <li>Technologies : HTML, CSS, JavaScript, Node.js, Express, SQL.</li>
+          </ul>
+        </div>
+        <div class="proj">
+          <h3>Site web dynamique</h3>
+          <ul class="dots">
+            <li>Développement d'une application avec authentification et gestion des données.</li>
+            <li>Technologies : Python, Django, HTML, CSS, SQLite.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Diplômes et Formations</h2>
+        <div class="tl">
+          <div class="entry">
+            <h3>Master 1 MIAGE – Ingénierie des Systèmes Intelligents</h3>
+            <div class="org">Université Paris Nanterre</div>
+            <div class="meta"><span>Depuis sept. 2026</span><span>Nanterre</span></div>
+          </div>
+          <div class="entry">
+            <h3>Double licence MIASHS (L2–L3) – Gestion &amp; Informatique (MIAGE)</h3>
+            <div class="org">Université Paris Nanterre</div>
+            <div class="meta"><span>De sept. 2024 à juin 2026</span><span>Nanterre</span></div>
+          </div>
+          <div class="entry">
+            <h3>Licence 1 – Développement web, mobile et multimédia</h3>
+            <div class="org">Université Cheikh Anta Diop</div>
+            <div class="meta"><span>De janv. 2022 à août 2023</span><span>Dakar, Sénégal</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="side">
+      <section>
+        <h2>Atouts</h2>
+        <ul class="dots">
+          <li>Esprit d'analyse et de synthèse</li>
+          <li>Rigueur et organisation</li>
+          <li>Autonomie et adaptabilité</li>
+          <li>Esprit d'équipe, gestion des priorités</li>
+          <li>Curiosité intellectuelle</li>
+          <li>Capacité à résoudre des problèmes</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Informatique</h2>
+        <h4>Data Analytics &amp; Machine Learning</h4>
+        <ul class="dots">
+          <li>Analyse exploratoire et préparation des données</li>
+          <li>Statistiques et modélisation prédictive</li>
+          <li>Machine Learning (R, Python)</li>
+        </ul>
+        <h4>Bases de données &amp; Big Data</h4>
+        <ul class="dots">
+          <li>SQL, PL/SQL, Oracle</li>
+          <li>MongoDB, PostgreSQL, MySQL</li>
+          <li>Modélisation relationnelle et NoSQL</li>
+        </ul>
+        <h4>Programmation &amp; Data Engineering</h4>
+        <ul class="dots">
+          <li>Python, Java, Scala, R</li>
+          <li>Programmation fonctionnelle</li>
+          <li>Traitement et transformation des données</li>
+          <li>Pipelines de données</li>
+        </ul>
+        <h4>Business Intelligence</h4>
+        <ul class="dots">
+          <li>Power BI, Tableau</li>
+          <li>Reporting et tableaux de bord</li>
+          <li>Analyse des KPI</li>
+        </ul>
+        <h4>Outils &amp; méthodes</h4>
+        <ul class="dots">
+          <li>RStudio, Oracle SQL Developer</li>
+          <li>Git, GitHub</li>
+          <li>UML, MERISE, Agile / Scrum</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Langues</h2>
+        <div class="lang"><strong>Français</strong>Langue maternelle</div>
+        <div class="lang"><strong>Anglais</strong>Intermédiaire supérieur (B2)</div>
+        <div class="lang"><strong>Arabe</strong>Intermédiaire supérieur (B2)</div>
+      </section>
+    </aside>
+  </div>
+</div>
+</body>
+</html>
