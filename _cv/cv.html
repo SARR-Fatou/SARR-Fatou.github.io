@@ -11,17 +11,17 @@
   body {
     font-family: 'Inter', Arial, sans-serif;
     color: #1b1f24;
-    font-size: 9.1pt;
-    line-height: 1.4;
+    font-size: 8.8pt;
+    line-height: 1.36;
     -webkit-print-color-adjust: exact; print-color-adjust: exact;
   }
   .page { width: 210mm; height: 297mm; overflow: hidden; position: relative; }
 
   /* En-tête */
-  header { padding: 8mm 9mm 4.2mm; }
+  header { padding: 7mm 9mm 3.6mm; }
   .name { font-size: 21pt; font-weight: 600; letter-spacing: -0.01em; line-height: 1.1; }
   .title { font-size: 13pt; font-weight: 700; color: #2d333b; margin: 1.6mm 0 2mm; }
-  .profile { font-size: 9.2pt; line-height: 1.45; }
+  .profile { font-size: 9pt; line-height: 1.42; }
 
   /* Bandeau contact */
   .band {
@@ -35,30 +35,32 @@
   .band svg { width: 3.8mm; height: 3.8mm; flex: none; }
 
   /* Colonnes */
-  .cols { display: grid; grid-template-columns: 1fr 64mm; gap: 8mm; padding: 6mm 9mm 0; }
-  h2 { font-size: 12pt; font-weight: 700; color: #2d333b; margin-bottom: 2.6mm; }
-  section + section { margin-top: 5.6mm; }
+  .cols { display: grid; grid-template-columns: 1fr 64mm; gap: 8mm; padding: 5mm 9mm 0; }
+  h2 { font-size: 11.6pt; font-weight: 700; color: #2d333b; margin-bottom: 2.2mm; }
+  section + section { margin-top: 4.4mm; }
 
   /* Frise */
   .tl { position: relative; padding-left: 5.2mm; }
   .tl::before { content: ""; position: absolute; left: 1.15mm; top: 0; bottom: 0; width: 0.35mm; background: #1b1f24; }
   .entry { position: relative; }
-  .entry + .entry { margin-top: 3mm; }
+  .entry + .entry { margin-top: 2.4mm; }
   .entry::before {
     content: ""; position: absolute; left: -5.2mm; top: 1mm;
     width: 2.6mm; height: 2.6mm; border-radius: 50%;
     background: #fff; border: 0.35mm solid #1b1f24;
   }
-  .entry h3 { font-size: 9.3pt; font-weight: 700; }
-  .org { font-size: 9.1pt; }
-  .meta { display: flex; justify-content: space-between; font-style: italic; font-size: 8.9pt; margin: 0.4mm 0 0.6mm; }
+  .entry h3 { font-size: 9pt; font-weight: 700; }
+  .org { font-size: 8.8pt; }
+  .meta { display: flex; justify-content: space-between; font-style: italic; font-size: 8.6pt; margin: 0.4mm 0 0.6mm; }
   .desc { color: #3d434b; }
   .desc li { list-style: none; padding-left: 2.6mm; position: relative; }
   .desc li::before { content: "•"; position: absolute; left: 0; }
 
   /* Projets */
-  .proj h3 { font-size: 9.3pt; font-weight: 700; }
-  .proj + .proj { margin-top: 1.8mm; }
+  .proj h3 { font-size: 9pt; font-weight: 700; }
+  .proj h3 .stack { font-weight: 400; color: #3d434b; }
+  .proj + .proj { margin-top: 1.6mm; }
+  .plink { font-size: 8pt; color: #2d333b; }
   ul.dots { padding-left: 4mm; }
   ul.dots li { margin: 0.2mm 0; }
 
@@ -105,7 +107,7 @@
     </div>
     <div class="it">
       <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
-      <a href="https://github.com/fatimasarrsaliou-stack">github.com/fatimasarrsaliou-stack</a>
+      <a href="https://github.com/SARR-Fatou">github.com/SARR-Fatou</a>
     </div>
   </div>
 
@@ -140,20 +142,25 @@
       </section>
 
       <section>
-        <h2>Projets</h2>
+        <h2>Projets data</h2>
         <div class="proj">
-          <h3>Application de gestion de clients</h3>
-          <ul class="dots">
-            <li>Développement d'une application CRUD avec API REST.</li>
-            <li>Technologies : HTML, CSS, JavaScript, Node.js, Express, SQL.</li>
-          </ul>
+          <h3>Pipeline de données Vélib' en temps réel <span class="stack">· Python, SQL, GitHub Actions</span></h3>
+          <p class="desc">Pipeline ETL automatisé chaque heure sur l'open data Vélib' (~1 500 stations) : contrôles qualité, tests, base SQL, indicateurs et tableau de bord en ligne.</p>
+          <a class="plink" href="https://sarr-fatou.github.io/velib-pipeline/">sarr-fatou.github.io/velib-pipeline</a>
         </div>
         <div class="proj">
-          <h3>Site web dynamique</h3>
-          <ul class="dots">
-            <li>Développement d'une application avec authentification et gestion des données.</li>
-            <li>Technologies : Python, Django, HTML, CSS, SQLite.</li>
-          </ul>
+          <h3>Prix de l'immobilier en Île-de-France <span class="stack">· Python, pandas, scikit-learn</span></h3>
+          <p class="desc">Analyse de 51 200 ventes (open data DVF 2024) et modèle de prédiction du prix : 4 modèles comparés, Gradient Boosting retenu.</p>
+          <a class="plink" href="https://github.com/SARR-Fatou/immobilier-idf">github.com/SARR-Fatou/immobilier-idf</a>
+        </div>
+        <div class="proj">
+          <h3>Base de données d'une GED <span class="stack">· PostgreSQL, PL/pgSQL, MERISE</span></h3>
+          <p class="desc">Modélisation MCD/MLD, traçabilité automatique par déclencheurs, vues de pilotage, requêtes d'analyse (fonctions de fenêtre, CTE) et tests.</p>
+          <a class="plink" href="https://github.com/SARR-Fatou/ged-sql">github.com/SARR-Fatou/ged-sql</a>
+        </div>
+        <div class="proj">
+          <h3>Applications web <span class="stack">· Node.js, Express, Django</span></h3>
+          <p class="desc">API REST de gestion de clients (CRUD) et site Django avec authentification.</p>
         </div>
       </section>
 
